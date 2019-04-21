@@ -1,0 +1,25 @@
+.img-tile {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+.img-tile img {
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+mat-card {
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/*# sourceMappingURL=pokemon-detail.component.css.map */

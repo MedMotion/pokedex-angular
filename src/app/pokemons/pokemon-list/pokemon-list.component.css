@@ -1,0 +1,30 @@
+a {
+  transition: all 200ms ease-in-out;
+}
+
+a:hover {
+  transform: scale(1.05) translateX(10px);
+}
+a:hover .bgi {
+  display: block;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bgi {
+  position: fixed;
+  display: none;
+  right: 35px;
+}
+
+.liste {
+  width: 20vw;
+  height: calc(100vh - 8px);
+  overflow: auto;
+}
+
+/*# sourceMappingURL=pokemon-list.component.css.map */

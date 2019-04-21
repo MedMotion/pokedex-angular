@@ -1,0 +1,18 @@
+<!--<mat-list>-->
+    <!--<mat-list-item routerLink="/pokemon/{{pokemon.id}}" *ngFor="let pokemon of pokemons?.data">-->
+        <!--<img matListAvatar src="../../../assets/img/sprites/{{pokemon.id}}.png" alt="image pokemon">-->
+        <!--<h3 matLine> {{pokemon.id}}. {{pokemon.name}} </h3>-->
+    <!--</mat-list-item>-->
+<!--</mat-list>-->
+
+<mat-nav-list class="liste" infiniteScroll (scrolled)="onSroll()" [scrollWindow]="false">
+    <a mat-list-item routerLink="/pokemon/{{pokemon.id}}" *ngFor="let pokemon of pokemons?.data">
+        <img matListAvatar src="../../../assets/img/sprites/{{pokemon.id}}.png" alt="image pokemon">
+        <h3 matLine> {{pokemon.id}}. {{pokemon.name}} </h3>
+        <!--<div class="bgi">-->
+            <!--<img src="../../../assets/img/official-artwork/{{pokemon.id}}.png" alt="">-->
+        <!--</div>-->
+    </a>
+</mat-nav-list>
+
+

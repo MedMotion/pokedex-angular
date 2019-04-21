@@ -1,0 +1,49 @@
+<!--<ng-container *ngIf="pokemon">-->
+    <!--<h2>{{pokemon.name}} details</h2>-->
+    <!--<div>-->
+        <!--<span>id : {{pokemon.id}}</span>-->
+    <!--</div>-->
+    <!--<div>-->
+        <!--<span>name : {{pokemon.name | uppercase}}</span>-->
+    <!--</div>-->
+    <!--<button (click)='goBack()'>go back</button>-->
+<!--</ng-container>-->
+<button mat-raised-button color="primary" (click)='goBack()'>Go back</button>
+
+<mat-card>
+
+    <mat-grid-list cols="2" rowHeight="300px">
+        <mat-grid-tile class="img-tile" [colspan]="1" [rowspan]="1">
+            <div class="img-tile">
+                <img src="../../../assets/img/official-artwork/{{pokemon?.id}}.png" alt="">
+                <span>n° {{pokemon?.id | number:'3.0-0'}}</span>
+            </div>
+
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-list role="list">
+                <mat-list-item role="listitem">
+                    {{pokemon?.name}}
+                    <audio autoplay #cry src="../../../assets/audio/{{pokemon.id}}.mp3"></audio>
+                    <button mat-icon-button (click)="cry.play()">
+                        <mat-icon aria-label="icon-button" >play_circle_outline</mat-icon>
+                    </button>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-chip-list>
+                        <mat-chip *ngFor="let type of pokemon?.types">{{type}}</mat-chip>
+                    </mat-chip-list>
+                </mat-list-item>
+                <mat-list-item role="listitem">Taille: {{pokemon.height | number:'.1'}} m</mat-list-item>
+                <mat-list-item role="listitem">Poids: {{pokemon.weight | number:'.1-5'}} kg</mat-list-item>
+            </mat-list>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">
+            <p>
+                {{pokemon.description}}
+            </p>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+</mat-card>
+
